@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NetGuard AI – Machine Learning-Based Network Vulnerability Assessment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/background.webp" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-logo" viewBox="0 0 64 72" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#38bdf8" />
+              <stop offset="1" stop-color="#2563eb" />
+            </linearGradient>
+          </defs>
+          <path d="M32 4 6 14v22c0 16 11 28 26 32 15-4 26-16 26-32V14L32 4z" fill="rgba(37,99,235,.15)" stroke="url(#lg)" stroke-width="4" stroke-linejoin="round" />
+          <rect x="21" y="31" width="22" height="18" rx="4" fill="url(#lg)" />
+          <path d="M25 31v-5a7 7 0 0 1 14 0v5" fill="none" stroke="url(#lg)" stroke-width="4" stroke-linecap="round" />
+          <circle cx="32" cy="39" r="2.6" fill="#07122e" />
+          <rect x="30.8" y="39" width="2.4" height="6" rx="1.2" fill="#07122e" />
+        </svg>
+        <div class="brand-text">
+          <h1 class="brand-name">NetGuard <span>AI</span></h1>
+          <p class="brand-sub">Machine Learning-Based <br />Network Vulnerability Assessment</p>
+        </div>
+      </div>
+
+    </header>
+
+    <section class="hero">
+      <span class="badge">
+        <svg viewBox="0 0 24 24" class="icon-sm" aria-hidden="true"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z" fill="#93c5fd"/></svg>
+        AI-Powered Security
+      </span>
+      <h2 class="headline">Scan. Analyze. <span class="accent">Stay Secure.</span></h2>
+      <p class="lead">Discover vulnerabilities in your network using the power <br />of Machine Learning and CVE intelligence.</p>
+    </section>
+
+    <div class="scan-zone">
+    <section class="scan-card" aria-labelledby="scan-title">
+      <div class="scan-head">
+        <svg class="radar" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#0b3a8f" stroke="#3b82f6" stroke-width="2"/>
+          <circle cx="32" cy="32" r="21" fill="none" stroke="#60a5fa" stroke-width="2"/>
+          <circle cx="32" cy="32" r="11" fill="none" stroke="#93c5fd" stroke-width="2"/>
+          <circle cx="32" cy="32" r="3.5" fill="#bfdbfe"/>
+          <path d="M32 2v14M32 48v14M2 32h14M48 32h14" stroke="#60a5fa" stroke-width="2"/>
+        </svg>
+        <div>
+          <h3 id="scan-title">Start a Vulnerability Scan</h3>
+          <p>Enter an IP address to analyze your network</p>
+        </div>
+      </div>
+
+      <form id="scan-form" class="scan-form" novalidate>
+        <label class="input-wrap" for="target">
+          <svg viewBox="0 0 24 24" class="icon-md" aria-hidden="true"><g fill="none" stroke="#9fb3d9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="5" rx="1.2"/><rect x="2.5" y="16" width="6" height="5" rx="1.2"/><rect x="15.5" y="16" width="6" height="5" rx="1.2"/><path d="M12 8v4M5.5 16v-4h13v4"/></g></svg>
+          <span class="divider"></span>
+          <input id="target" name="target" type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="e.g. 192.168.1.100 or 192.168.1.0/24" aria-describedby="scan-msg" />
+        </label>
+        <button type="submit" id="scan-btn" class="btn-scan">
+          <svg viewBox="0 0 24 24" class="icon-md" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" fill="#fff"/></svg>
+          <span class="btn-label">Start Scan</span>
+          <svg viewBox="0 0 24 24" class="icon-md arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+
+      <p class="scan-note">Scan only networks you own or have written permission to test.</p>
+
+      <p id="scan-msg" class="scan-msg" role="status" aria-live="polite"></p>
+      <div class="progress" id="progress" hidden><span></span></div>
+    </section>
+    </div>
+
+    <div class="features-title"><span>Our Features</span></div>
+
+    <section class="features">
+      <article class="feature f-blue">
+        <div class="f-icon">
+          <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6" fill="none" stroke="#fff" stroke-width="2.2"/><path d="m15 15 5 5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </div>
+        <h4>Network Discovery</h4>
+        <p>Find hosts and services <br />across your network.</p>
+      </article>
+
+      <article class="feature f-purple">
+        <div class="f-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 3 3 3 0 0 0 1 2.5A3 3 0 0 0 6 17a3 3 0 0 0 5 1.5V5.5A3 3 0 0 0 9 4zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 3 3 3 0 0 1-1 2.5A3 3 0 0 1 18 17a3 3 0 0 1-5 1.5V5.5A3 3 0 0 1 15 4z" fill="none" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 10h2M14 10h2M8 14h2M14 14h2" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h4>ML Analysis</h4>
+        <p>Detect risky configurations <br />using AI models.</p>
+      </article>
+
+      <article class="feature f-green">
+        <div class="f-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>CVE Integration</h4>
+        <p>Get real vulnerability data <br />from NVD.</p>
+      </article>
+
+      <article class="feature f-orange">
+        <div class="f-icon">
+          <svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5M10 13h6M10 17h6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Detailed Reports</h4>
+        <p>Receive actionable insights <br />and recommendations.</p>
+      </article>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
